@@ -1,5 +1,22 @@
-# background-pic package
+# atom-background-pic
 
-A short description of your package.
+> A new flickr image every day in the background when there are no open editors.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+![A screenshot of your package](img/screenshot.png)
+
+## Quick start
+
+1. Install package `apm atom-background-pic`
+- Toggle it on with `cntl + opt + o`
+- Close all editors to view a new Flickr image everyday
+
+## Credits
+
+Images are from [Flickr public API](https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=8162cbed138466b501453381c1ce5bc9&group_id=34427469792%40N01&per_page=31&page=1&format=json&nojsoncallback=1&api_sig=ee4ea61ab9ce363012ef88a85b77a4d1) and the individual [urls are here](lib/pics.coffee)
+
+## Todo
+
+1. Publish to Atom Packages
+- Put a little note under each photo to link back to the Flickr page
+- Get images from Instagram + 500px
+- Configurable image url

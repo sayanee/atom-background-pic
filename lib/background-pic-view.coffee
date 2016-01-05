@@ -1,10 +1,15 @@
 {CompositeDisposable} = require 'atom'
+Pics = require './pics'
 
 module.exports =
 class BackgroundPicElement extends HTMLElement
   constructor: ->
+    today = new Date()
+    todayDate = today.getDate() - 1
     @pic = document.createElement('div')
+    @pic.style.backgroundImage = 'url(' + Pics[ todayDate ] + ')'
     @pic.classList.add('pic')
+    console.log(Pics[ todayDate ])
 
     @disposables = new CompositeDisposable
     @disposables.add atom.workspace.onDidAddPane => @updateVisibility()
