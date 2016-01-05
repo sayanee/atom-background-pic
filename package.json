@@ -1,0 +1,18 @@
+{
+  "name": "atom-background-pic",
+  "main": "./lib/background-pic",
+  "version": "1.0.0",
+  "description": "Beautiful photos on start",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "background-pic:toggle"
+  },
+  "repository": "https://github.com/sayanee/atom-background-pic",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
