@@ -20,3 +20,8 @@ Images are from [Flickr public API](https://api.flickr.com/services/rest/?method
 - Put a little note under each photo to link back to the Flickr page
 - Get images from Instagram + 500px
 - Configurable image url
+
+## Inspired by
+
+1. [Atom background tips](https://github.com/atom/background-tips)
+- [Momentum](https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=en)
