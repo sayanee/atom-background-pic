@@ -2,7 +2,7 @@
 
 > A new flickr image every day in the background when there are no open editors.
 
-![A screenshot of your package](img/screenshot.png)
+![A screenshot of your package](https://raw.githubusercontent.com/sayanee/atom-background-pic/master/img/screenshot.png)
 
 ## Quick start
 
@@ -16,8 +16,7 @@ Images are from [Flickr public API](https://api.flickr.com/services/rest/?method
 
 ## Todo
 
-1. Publish to Atom Packages
-- Put a little note under each photo to link back to the Flickr page
+1. Put a little note under each photo to link back to the Flickr page
 - Get images from Instagram + 500px
 - Configurable image url
 
