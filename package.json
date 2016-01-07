@@ -1,7 +1,7 @@
 {
   "name": "atom-background-pic",
   "main": "./lib/background-pic",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Beautiful photos on start",
   "keywords": [],
   "activationCommands": {
