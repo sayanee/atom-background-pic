@@ -9,7 +9,6 @@ class BackgroundPicElement extends HTMLElement
     @pic = document.createElement('div')
     @pic.style.backgroundImage = 'url(' + Pics[ todayDate ] + ')'
     @pic.classList.add('pic')
-    console.log(Pics[ todayDate ])
 
     @disposables = new CompositeDisposable
     @disposables.add atom.workspace.onDidAddPane => @updateVisibility()
