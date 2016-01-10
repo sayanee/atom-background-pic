@@ -1,11 +1,15 @@
 {
   "name": "atom-background-pic",
   "main": "./lib/background-pic",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "private": true,
   "description": "Beautiful photos on start",
   "keywords": [
-    "Flickr", "background", "photo", "pictures", "pic"
+    "Flickr",
+    "background",
+    "photo",
+    "pictures",
+    "pic"
   ],
   "repository": "https://github.com/sayanee/atom-background-pic",
   "license": "MIT",
