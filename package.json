@@ -4,10 +4,9 @@
   "version": "2.0.3",
   "private": true,
   "description": "Beautiful photos on start",
-  "keywords": [],
-  "activationCommands": {
-    "atom-workspace": "background-pic:toggle"
-  },
+  "keywords": [
+    "Flickr", "background", "photo", "pictures", "pic"
+  ],
   "repository": "https://github.com/sayanee/atom-background-pic",
   "license": "MIT",
   "engines": {

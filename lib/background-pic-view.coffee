@@ -1,19 +1,28 @@
 {CompositeDisposable} = require 'atom'
 Pics = require './pics'
 
+Template = """
+<div class="pic"></div>
+"""
+
 module.exports =
 class BackgroundPicElement extends HTMLElement
-  constructor: ->
-    today = new Date()
-    todayDate = today.getDate() - 1
-    @pic = document.createElement('div')
-    @pic.style.backgroundImage = 'url(' + Pics[ todayDate ] + ')'
-    @pic.classList.add('pic')
+  StartDelay: 500
 
+  createdCallback: ->
     @disposables = new CompositeDisposable
     @disposables.add atom.workspace.onDidAddPane => @updateVisibility()
     @disposables.add atom.workspace.onDidDestroyPane => @updateVisibility()
     @disposables.add atom.workspace.onDidChangeActivePaneItem => @updateVisibility()
+
+    @startTimeout = setTimeout((=> @updateVisibility()), @StartDelay)
+
+  attachedCallback: ->
+    @innerHTML = Template
+    today = new Date()
+    todayDate = today.getDate() - 1
+    @pic = @querySelector('.pic')
+    @pic.style.backgroundImage = 'url(' + Pics[ todayDate ] + ')'
 
   updateVisibility: ->
     if @shouldBeAttached()
@@ -24,15 +33,11 @@ class BackgroundPicElement extends HTMLElement
   shouldBeAttached: ->
     atom.workspace.getPanes().length is 1 and not atom.workspace.getActivePaneItem()?
 
-  serialize: ->
-
-  destroy: ->
-    @stop()
-    @disposables.dispose()
-
   attach: ->
     paneView = atom.views.getView(atom.workspace.getActivePane())
-    paneView.querySelector('.item-views').appendChild(@pic)
+    paneView.appendChild(this)
 
   detach: ->
-    @pic.remove()
+    @remove()
+
+module.exports = document.registerElement 'background-pic', prototype: BackgroundPicElement.prototype

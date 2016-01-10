@@ -7,8 +7,7 @@
 ## Quick start
 
 1. Install package `apm install atom-background-pic`
-- Toggle it on with `cntl + opt + o`
-- Close all editors to view a new Flickr image everyday
+- Close all editor tabs / panes to view a new image from Flickr everyday
 
 ## Credits
 
